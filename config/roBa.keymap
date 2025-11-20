@@ -35,23 +35,13 @@
         };
 
         shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
         };
     };
 
