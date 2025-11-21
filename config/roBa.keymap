@@ -118,6 +118,7 @@
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -138,10 +139,10 @@
 
         NUM {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                &kp NUMBER_6  &kp N7     &kp N8         &kp N9            &kp N0
-&trans        &trans        &trans        &trans        &trans  &trans      &trans            &kp GRAVE     &kp EQUAL  &kp SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LSHIFT    &trans        &trans        &trans        &trans  &trans      &kp SINGLE_QUOTE  &kp ASTERISK  &kp MINUS  &kp PLUS       &kp PERIOD        &kp BACKSLASH
-&trans        &trans        &none         &trans        &trans  &trans      &mo 6             &trans                                                    &kp SINGLE_QUOTE
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5                                                              &kp NUMBER_6  &kp N7     &kp N8         &kp N9            &kp N0
+&kp EXCL      &kp AT        &kp HASH       &kp DOLLAR    &kp PERCENT        &trans                    &trans                 &kp GRAVE     &kp EQUAL  &kp SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LSHIFT    &kp CARET     &kp AMPERSAND  &kp ASTRK     &kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS  &kp ASTERISK  &kp MINUS  &kp PLUS       &kp PERIOD        &kp BACKSLASH
+&trans        &trans        &none          &trans        &trans             &trans                    &mo 6                  &trans                                                    &kp SINGLE_QUOTE
             >;
         };
 
