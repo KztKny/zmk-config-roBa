@@ -30,7 +30,7 @@
 
 #define MOUSE 4
 
-/{
+/ {
     macros {
         exit_AML: exit_AML {
             compatible = "zmk,behavior-macro";
@@ -70,9 +70,11 @@
             quick-tap-ms = <200>;
         };
     };
-}
+
+    }
 
 / {
+
     combos {
         compatible = "zmk,combos";
 
@@ -117,10 +119,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                   &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))         &kp ESC              &kp H        &kp J  &kp K      &kp L    &lt 4 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON             &kp SEMICOLON        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_1  &lt 1 SPACE  &lt 4 LANGUAGE_2      &mt LC(Z) BACKSPACE  &lt 2 ENTER                             &lt 3 DEL
+&kp Q                             &kp W                  &kp E                  &kp R                        &kp T                                                   &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A                             &kp S                  &kp D                  &kp F                        &kp G        &kp LS(LG(S))         &kp ESC              &kp H        &kp J  &kp K      &kp L    &lt 4 MINUS
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X                  &kp C                  &kp V                        &kp B        &kp COLON             &kp SEMICOLON        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp_exit_AML LCTRL                &kp_exit_AML LEFT_WIN  &kp_exit_AML LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_1  &lt 1 SPACE  &lt 4 LANGUAGE_2      &mt LC(Z) BACKSPACE  &lt 2 ENTER                             &lt 3 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -131,7 +133,7 @@
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                &kp NUMBER_6  &kp N7     &kp N8         &kp N9            &kp N0
 &trans        &trans        &trans        &trans        &trans  &trans      &trans            &kp GRAVE     &kp EQUAL  &kp SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp LSHIFT    &trans        &trans        &trans        &trans  &trans      &kp SINGLE_QUOTE  &kp ASTERISK  &kp MINUS  &kp PLUS       &kp PERIOD        &kp BACKSLASH
-&trans        &trans        &none         &trans        &trans  &trans      &trans            &trans                                                    &kp SINGLE_QUOTE
+&trans        &trans        &none         &trans        &trans  &trans      &mo 6             &trans                                                    &kp SINGLE_QUOTE
             >;
         };
 
