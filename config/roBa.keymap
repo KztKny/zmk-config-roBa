@@ -31,7 +31,6 @@
 #define MOUSE 4
 
 / {
-
     combos {
         compatible = "zmk,combos";
 
@@ -58,6 +57,7 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
         exit_AML: exit_AML {
             compatible = "zmk,behavior-macro";
             wait-ms = <0>;
@@ -86,6 +86,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
         tog_off: toggle_layer_off {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -110,10 +111,10 @@
 
         default_layer {
             bindings = <
-&kp Q                             &kp W                  &kp E                  &kp R                        &kp T                                                   &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A                             &kp S                  &kp D                  &kp F                        &kp G        &kp LS(LG(S))         &kp ESC              &kp H        &kp J  &kp K      &kp L    &lt 4 MINUS
-&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X                  &kp C                  &kp V                        &kp B        &kp COLON             &kp SEMICOLON        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp_exit_AML LCTRL                &kp_exit_AML LEFT_WIN  &kp_exit_AML LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_1  &lt 1 SPACE  &lt 4 LANGUAGE_2      &mt LC(Z) BACKSPACE  &lt 2 ENTER                             &lt 3 DEL
+&kp Q                             &kp W                  &kp E                  &kp R                        &kp T                                             &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A                             &kp S                  &kp D                  &kp F                        &kp G        &kp LS(LG(S))         &kp ESC        &kp H        &kp J  &kp K      &kp L    &lt 4 MINUS
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X                  &kp C                  &kp V                        &kp B        &kp COLON             &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp_exit_AML LCTRL                &kp_exit_AML LEFT_WIN  &kp_exit_AML LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_1  &lt 1 SPACE  &lt 4 LANGUAGE_2      &kp BACKSPACE  &lt 2 ENTER                             &lt 3 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
